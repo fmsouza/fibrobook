@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        
+        <TextView
+	        android:id="@+id/labelName"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="10dp"
+	        android:layout_marginBottom="0dp"
+	        android:textSize="20sp"
+	        android:textStyle="bold"
+	        android:text="@string/formName" />
+        
+        <TextView
+	        android:id="@+id/valueName"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+	        android:layout_marginRight="10dp"
+	        android:layout_marginBottom="0dp"
+	        android:textSize="20sp"
+	        android:text="" />
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        
+        <TextView
+	        android:id="@+id/labelAge"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="10dp"
+	        android:layout_marginBottom="0dp"
+	        android:textSize="20sp"
+	        android:textStyle="bold"
+	        android:text="@string/formAge" />
+        
+        <TextView
+	        android:id="@+id/valueAge"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+	        android:layout_marginRight="10dp"
+	        android:layout_marginBottom="0dp"
+	        android:textSize="20sp"
+	        android:text="" />
+        
+    </LinearLayout>
+    
+    <Button
+        android:id="@+id/button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="@string/edit" />
+
+</LinearLayout>

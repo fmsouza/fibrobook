@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+    <string name="acc_title">Manage Account</string>
+    <string name="af_title">About Fibrobook</string>
+    <string name="nuf_title">Fill your data</string>
+
+    <string name="app_name">Fibrobook</string>
+    <string name="calendar_label">Choose the date</string>
+    <string name="action_calendar">Go to calendar</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello">How are you feeling today?</string>
+    <string name="diary">Select date on calendar</string>
+    <color name="text_color">#31D1F1</color>
+	<color name="white">#ffffff</color>
+	<string name="open">Open</string>
+	<string name="edit">Edit</string>
+	<string name="save">Save</string>
+	<string name="intensity">Intensity</string>
+    
+    <string name="af_content">Lorem ipsum dolor sit amet</string>
+    
+	<string name="formName">Name: </string>
+	<string name="formAge">Age: </string>
+
+</resources>

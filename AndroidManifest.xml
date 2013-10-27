@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fibrobook"
+    android:versionCode="1"
+    android:versionName="0.2a" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="16" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.fibrobook.Diary"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity 
+            android:name="com.nevala.calendar.CalendarView"
+            android:label="@string/calendar_label" ></activity>
+        <activity 
+            android:name="com.fibrobook.Settings"
+            android:label="@string/action_settings" ></activity>
+        <activity 
+            android:name="com.fibrobook.Account"
+            android:label="@string/acc_title" ></activity>
+        <activity 
+            android:name="com.fibrobook.AboutFibrobook"
+            android:label="@string/af_title" ></activity>
+        <activity 
+            android:name="com.fibrobook.NewUserForm"
+            android:label="@string/nuf_title" ></activity>
+        <activity 
+            android:name="com.fibrobook.UpdateUserForm"
+            android:label="@string/nuf_title" ></activity>
+    </application>
+
+</manifest>
