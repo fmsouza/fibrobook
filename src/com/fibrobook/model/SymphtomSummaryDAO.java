@@ -9,24 +9,24 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-public class DaySummaryDAO extends SQLiteOpenHelper{
+public class SymphtomSummaryDAO extends SQLiteOpenHelper{
 	
 	private static int VERSION = 1;
 	private static String TABLE = "user_disease_log";
 	private static String[] COLS = {"user","disease","date","intensity","local"};
 	private static Context mainContext;
 
-	public DaySummaryDAO(Context context) {
+	public SymphtomSummaryDAO(Context context) {
 		super(context, TABLE, null, VERSION);
 		mainContext = context;
 	}
 	
-	public void save(DaySummary ds){
+	public void save(SymphtomSummary ds){
 		if(rowExists(ds)) update(ds);
 		else add(ds);
 	}
 	
-	public void add(DaySummary ds){
+	public void add(SymphtomSummary ds){
 		ContentValues values = new ContentValues();
 		values.put("user", ds.getUser().getId());
 		values.put("disease", ds.getDisease().getId());
@@ -36,7 +36,7 @@ public class DaySummaryDAO extends SQLiteOpenHelper{
 		getWritableDatabase().insert(TABLE, null, values);
 	}
 	
-	public void update(DaySummary ds){
+	public void update(SymphtomSummary ds){
 		ContentValues values = new ContentValues();
 		values.put("intensity", ds.getIntensity());
 		values.put("local",ds.getLocal());
@@ -44,28 +44,28 @@ public class DaySummaryDAO extends SQLiteOpenHelper{
 		getWritableDatabase().update(TABLE, values, where, null);
 	}
 	
-	public List<DaySummary> getDailySummary(String date){
-		List<DaySummary> ds = new ArrayList<DaySummary>();
+	public List<SymphtomSummary> getSymphtomSummary(String date){
+		List<SymphtomSummary> ds = new ArrayList<SymphtomSummary>();
 		Cursor c = getWritableDatabase().query(TABLE,COLS,"date='"+date+"'",null,null,null,null);
-		while(c.moveToNext()) ds.add(new DaySummary(UserDAO.getUser(mainContext,c.getInt(0)), DiseaseDAO.getDisease(mainContext,c.getInt(1)), c.getString(2), c.getInt(3),c.getString(4)));
+		while(c.moveToNext()) ds.add(new SymphtomSummary(UserDAO.getUser(mainContext,c.getInt(0)), DiseaseDAO.getDisease(mainContext,c.getInt(1)), c.getString(2), c.getInt(3),c.getString(4)));
 		c.close();
 		return ds;
 		
 	}
 	
-	public boolean rowExists(DaySummary ds){
-		Cursor c = getWritableDatabase().query(TABLE, COLS, "user="+String.valueOf(ds.getUser().getId())+" AND disease="+String.valueOf(ds.getDisease().getId())+" AND date='"+ds.getDate()+"'", null, null, null, null);
+	public boolean rowExists(SymphtomSummary ss){
+		Cursor c = getWritableDatabase().query(TABLE, COLS, "user="+String.valueOf(ss.getUser().getId())+" AND disease="+String.valueOf(ss.getDisease().getId())+" AND date='"+ss.getDate()+"'", null, null, null, null);
 		int count = c.getCount();
 		c.close();
 		return (count>0)? true:false;
 	}
 	
-	public List<DaySummary> getList(){
-		List<DaySummary> ds = new ArrayList<DaySummary>();
+	public List<SymphtomSummary> getList(){
+		List<SymphtomSummary> ss = new ArrayList<SymphtomSummary>();
 		Cursor c = getWritableDatabase().query(TABLE,COLS,null,null,null,null,null);
-		while(c.moveToNext()) ds.add(new DaySummary(UserDAO.getUser(mainContext,c.getInt(0)), DiseaseDAO.getDisease(mainContext,c.getInt(1)), c.getString(2), c.getInt(3),c.getString(4)));
+		while(c.moveToNext()) ss.add(new SymphtomSummary(UserDAO.getUser(mainContext,c.getInt(0)), DiseaseDAO.getDisease(mainContext,c.getInt(1)), c.getString(2), c.getInt(3),c.getString(4)));
 		c.close();
-		return ds;
+		return ss;
 	}
 
 	@Override

@@ -1,31 +1,31 @@
 package com.fibrobook.model;
 
-public class DaySummary {
+public class DailyEventSummary {
 	
 	private User user;
-	private Disease disease;
+	private DailyEvent dailyEvent;
 	private String date;
 	private float intensity;
 	private String local;
 
-	public DaySummary(User user, Disease disease, String date, float intensity, String local) {
+	public DailyEventSummary(User user, DailyEvent dailyEvent, String date, float intensity, String local) {
 		this.setUser(user);
-		this.setDisease(disease);
+		this.setDailyEvent(dailyEvent);
 		this.setDate(date);
 		this.setIntensity(intensity);
 		this.setLocal(local);
 	}
 
-	public DaySummary(User user, Disease disease, String date, float intensity) {
+	public DailyEventSummary(User user, DailyEvent dailyEvent, String date, float intensity) {
 		this.setUser(user);
-		this.setDisease(disease);
+		this.setDailyEvent(dailyEvent);
 		this.setDate(date);
 		this.setIntensity(intensity);
 	}
 
-	public DaySummary(User user, Disease disease, String date) {
+	public DailyEventSummary(User user, DailyEvent dailyEvent, String date) {
 		this.setUser(user);
-		this.setDisease(disease);
+		this.setDailyEvent(dailyEvent);
 		this.setDate(date);
 	}
 
@@ -37,12 +37,12 @@ public class DaySummary {
 		this.user = user;
 	}
 
-	public Disease getDisease() {
-		return disease;
+	public DailyEvent getDailyEvent() {
+		return dailyEvent;
 	}
 
-	public void setDisease(Disease disease) {
-		this.disease = disease;
+	public void setDailyEvent(DailyEvent dailyEvent) {
+		this.dailyEvent = dailyEvent;
 	}
 
 	public float getIntensity() {

@@ -37,7 +37,7 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.astuetz.viewpager.extensions.PagerSlidingTabStrip;
-import com.fibrobook.model.DaySummaryDAO;
+import com.fibrobook.model.SymphtomSummaryDAO;
 import com.fibrobook.model.User;
 import com.fibrobook.model.UserDAO;
 import com.fibrobook.viewpager.custom.CardFragment;
@@ -129,8 +129,8 @@ public class MainActivity extends FragmentActivity {
 
 			case PICK_DATE_REQUEST:
 				date = data.getStringExtra("date");
-				DaySummaryDAO dao = new DaySummaryDAO(this);
-				CardFragment.ds = dao.getDailySummary(date);
+				SymphtomSummaryDAO dao = new SymphtomSummaryDAO(this);
+				CardFragment.ds = dao.getSymphtomSummary(date);
 				dao.close();
 				String[] d = date.split("-");
 				String[] title = getTitle().toString().split(" - ");
