@@ -18,7 +18,7 @@ public class Account extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.account);
 		
-		User user = Diary.user;
+		User user = MainActivity.user;
 
 		TextView name = (TextView) findViewById(R.id.valueName);
 		name.setText(user.getName());
@@ -42,7 +42,7 @@ public class Account extends Activity {
 		if (requestCode == UPDATE_USER_DATA_REQUEST) {
             if (resultCode == RESULT_OK) {
         		
-        		User user = Diary.user;
+        		User user = MainActivity.user;
 
         		TextView name = (TextView) findViewById(R.id.valueName);
         		name.setText(user.getName());

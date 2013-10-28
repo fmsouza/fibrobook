@@ -17,7 +17,7 @@ public class UpdateUserForm extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.form_user);
 		
-		User user = Diary.user;
+		User user = MainActivity.user;
 		
 		EditText name = (EditText) findViewById(R.id.name);
 		name.setText(user.getName());
@@ -36,7 +36,7 @@ public class UpdateUserForm extends Activity {
 				user.setAge(Integer.parseInt(age.getEditableText().toString()));
 				UserDAO dao = new UserDAO(UpdateUserForm.this);
 				dao.update(user);
-				Diary.user = user;
+				MainActivity.user = user;
 				dao.close();
 				
 				setResult(-1);
