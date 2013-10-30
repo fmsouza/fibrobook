@@ -35,7 +35,6 @@ import android.widget.FrameLayout.LayoutParams;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RatingBar;
-import android.widget.TextView;
 
 import com.fibrobook.MainActivity;
 import com.fibrobook.model.DailyEvent;
@@ -114,17 +113,15 @@ public class CardFragment extends Fragment {
 		l.setBackgroundResource(R.drawable.background_card);
 
 		switch (position) {
-		case 0:
-			symphtomsView(l);
-			break;
-
-		case 1:
-			dayView(l);
-			break;
-
-		case 2:
-			plotsView(l);
-			break;
+		
+			case 0:
+				symphtomsView(l);
+				break;
+	
+			case 1:
+				dayView(l);
+				break;
+				
 		}
 
 		fl.addView(l);
@@ -191,7 +188,15 @@ public class CardFragment extends Fragment {
 	}
 
 	public void dayView(LinearLayout l) {
+		
+		LayoutParams params = new LayoutParams(
+			android.view.ViewGroup.LayoutParams.MATCH_PARENT,
+			android.view.ViewGroup.LayoutParams.MATCH_PARENT,
+			Gravity.TOP);
+		
 		ListView eventList = new ListView(getActivity());
+		eventList.setLayoutParams(params);
+		
 		ArrayAdapter<DailyEvent> adapter = new ArrayAdapter<DailyEvent>(
 				getActivity(), android.R.layout.simple_list_item_1, dailyEvents);
 		eventList.setAdapter(adapter);
@@ -247,13 +252,6 @@ public class CardFragment extends Fragment {
 		});
 
 		l.addView(eventList);
-	}
-
-	public void plotsView(LinearLayout l) {
-		TextView t = new TextView(getActivity());
-		t.setText("Here you'll find the plot options");
-		l.addView(t);
-
 	}
 
 	private void prepareEnvironment() {
