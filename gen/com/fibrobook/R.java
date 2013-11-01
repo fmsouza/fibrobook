@@ -148,25 +148,27 @@ containing a value of this type.
     }
     public static final class id {
         public static final int aboutContent=0x7f090000;
-        public static final int action_calendar=0x7f09001b;
-        public static final int action_settings=0x7f09001c;
-        public static final int age=0x7f090012;
+        public static final int action_calendar=0x7f09001d;
+        public static final int action_settings=0x7f09001e;
+        public static final int birthday=0x7f090012;
         public static final int button=0x7f090005;
         public static final int date=0x7f09000b;
         public static final int date_icon=0x7f09000c;
-        public static final int dialog_ratingbar=0x7f090018;
+        public static final int dialog_ratingbar=0x7f09001a;
         public static final int gridview=0x7f09000a;
         public static final int header=0x7f090006;
         public static final int image=0x7f090014;
+        public static final int input=0x7f090018;
         public static final int labelAge=0x7f090003;
         public static final int labelName=0x7f090001;
+        public static final int linLayout=0x7f090017;
         public static final int name=0x7f090010;
         public static final int next=0x7f090009;
-        public static final int optionList=0x7f09001a;
+        public static final int optionList=0x7f09001c;
         public static final int pager=0x7f090016;
         public static final int previous=0x7f090007;
-        public static final int rank_dialog_button=0x7f090019;
-        public static final int rank_dialog_text1=0x7f090017;
+        public static final int rank_dialog_button=0x7f09001b;
+        public static final int rank_dialog_text1=0x7f090019;
         public static final int submit=0x7f090013;
         public static final int symphtomList=0x7f09000e;
         public static final int tabs=0x7f090015;
@@ -185,9 +187,10 @@ containing a value of this type.
         public static final int diary=0x7f030004;
         public static final int form_user=0x7f030005;
         public static final int fragment_quick_contact=0x7f030006;
-        public static final int main=0x7f030007;
-        public static final int rating_dialog=0x7f030008;
-        public static final int settings=0x7f030009;
+        public static final int login=0x7f030007;
+        public static final int main=0x7f030008;
+        public static final int rating_dialog=0x7f030009;
+        public static final int settings=0x7f03000a;
     }
     public static final class menu {
         public static final int diary=0x7f080000;
@@ -203,6 +206,7 @@ containing a value of this type.
         public static final int diary=0x7f070008;
         public static final int edit=0x7f07000a;
         public static final int formAge=0x7f07000f;
+        public static final int formBirthday=0x7f070010;
         public static final int formName=0x7f07000e;
         public static final int hello=0x7f070007;
         public static final int intensity=0x7f07000c;

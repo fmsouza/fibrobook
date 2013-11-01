@@ -22,5 +22,6 @@
     
 	<string name="formName">Name: </string>
 	<string name="formAge">Age: </string>
+	<string name="formBirthday">Birthday: </string>
 
 </resources>

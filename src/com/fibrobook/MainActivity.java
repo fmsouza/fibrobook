@@ -139,7 +139,7 @@ public class MainActivity extends FragmentActivity {
 
 			case REGISTER_USER:
 				Toast.makeText(getApplicationContext(),
-						"Welcome, " + user.getName() + "!", Toast.LENGTH_SHORT)
+						"Welcome, " + user.getName() + "!", Toast.LENGTH_LONG)
 						.show();
 				break;
 

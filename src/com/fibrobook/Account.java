@@ -18,6 +18,7 @@ import android.widget.TextView;
 public class Account extends Activity {
 	
 	private static final int UPDATE_USER_DATA_REQUEST = 1;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);

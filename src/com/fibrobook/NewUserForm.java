@@ -13,14 +13,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 
 public class NewUserForm extends Activity {
+	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.form_user);
+		changeColor(MainActivity.currentColor);
 		
 		Button btn = (Button) findViewById(R.id.submit);
 		btn.setOnClickListener(new OnClickListener() {
@@ -28,10 +31,10 @@ public class NewUserForm extends Activity {
 			@Override
 			public void onClick(View v) {
 				EditText name = (EditText) findViewById(R.id.name);
-				EditText age = (EditText) findViewById(R.id.age);
+				DatePicker birthday = (DatePicker) findViewById(R.id.birthday);
 				
 				User user = new User(name.getEditableText().toString());
-				user.setAge(Integer.parseInt(age.getEditableText().toString()));
+				user.setBirthday(birthday.getYear()+"-"+(birthday.getMonth()+1)+"-"+birthday.getDayOfMonth());
 				UserDAO dao = new UserDAO(NewUserForm.this);
 				dao.add(user);
 				MainActivity.user = user;
@@ -41,7 +44,6 @@ public class NewUserForm extends Activity {
 				finish();
 			}
 		});
-		changeColor(MainActivity.currentColor);
 	}
 
 	private void changeColor(int newColor) {

@@ -50,6 +50,7 @@ public class CalendarView extends Activity {
 	
 	public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
+		changeColor(MainActivity.currentColor);
 	    setContentView(R.layout.calendar);
 	    month = Calendar.getInstance();
 	    onNewIntent(getIntent());
@@ -113,7 +114,6 @@ public class CalendarView extends Activity {
 		        
 		    }
 		});
-		changeColor(MainActivity.currentColor);
 	}
 	
 	public void refreshCalendar()

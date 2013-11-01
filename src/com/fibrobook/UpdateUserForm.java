@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 
 public class UpdateUserForm extends Activity {
@@ -21,13 +22,15 @@ public class UpdateUserForm extends Activity {
 	protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.form_user);
+		changeColor(MainActivity.currentColor);
 		
 		User user = MainActivity.user;
 		
 		EditText name = (EditText) findViewById(R.id.name);
 		name.setText(user.getName());
-		EditText age = (EditText) findViewById(R.id.age);
-		age.setText(String.valueOf(user.getAge())); 
+		DatePicker birthday = (DatePicker) findViewById(R.id.birthday);
+		String[] birthdate = user.getBirthday().split("-"); 
+		birthday.updateDate(Integer.parseInt(birthdate[0]), Integer.parseInt(birthdate[1])-1, Integer.parseInt(birthdate[2]));
 		
 		Button btn = (Button) findViewById(R.id.submit);
 		btn.setOnClickListener(new OnClickListener() {
@@ -35,10 +38,10 @@ public class UpdateUserForm extends Activity {
 			@Override
 			public void onClick(View v) {
 				EditText name = (EditText) findViewById(R.id.name);
-				EditText age = (EditText) findViewById(R.id.age);
+				DatePicker birthday = (DatePicker) findViewById(R.id.birthday);
 				
 				User user = new User(name.getEditableText().toString());
-				user.setAge(Integer.parseInt(age.getEditableText().toString()));
+				user.setBirthday(birthday.getYear()+"-"+birthday.getMonth()+"-"+birthday.getDayOfMonth());
 				UserDAO dao = new UserDAO(UpdateUserForm.this);
 				dao.update(user);
 				MainActivity.user = user;
@@ -48,7 +51,6 @@ public class UpdateUserForm extends Activity {
 				finish();
 			}
 		});
-		changeColor(MainActivity.currentColor);
 	}
 
 	private void changeColor(int newColor) {
