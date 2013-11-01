@@ -2,7 +2,6 @@ package com.fibrobook;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.text.InputFilter.LengthFilter;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnKeyListener;
@@ -27,7 +26,7 @@ public class Login extends Activity {
 			@Override
 			public boolean onKey(View v, int keyCode, KeyEvent event) {
 				if(et.getText().length()==Login.PASSWORD_SIZE){
-					if(et.getText().toString()==MainActivity.user.getPassword()){
+					if(et.getText().toString().equals(MainActivity.user.getPassword())){
 						setResult(-1);
 						finish();
 					}

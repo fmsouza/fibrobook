@@ -23,5 +23,7 @@
 	<string name="formName">Name: </string>
 	<string name="formAge">Age: </string>
 	<string name="formBirthday">Birthday: </string>
+	<string name="pass">Password: </string>
+	<string name="confirmPass">Password again: </string>
 
 </resources>

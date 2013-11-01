@@ -48,6 +48,7 @@ public class MainActivity extends FragmentActivity {
 
 	private static final int PICK_DATE_REQUEST = 1;
 	private static final int REGISTER_USER = 2;
+	private static final int DO_LOGIN = 3;
 	private PagerSlidingTabStrip tabs;
 	private ViewPager pager;
 	private MyPagerAdapter adapter;
@@ -88,8 +89,9 @@ public class MainActivity extends FragmentActivity {
 	private void prepareEnvironment() {
 		user = UserDAO.getUser(this, 1);
 		if (user == null)
-			startActivityForResult(new Intent(this, NewUserForm.class),
-					REGISTER_USER);
+			startActivityForResult(new Intent(this, NewUserForm.class), REGISTER_USER);
+		else
+			startActivityForResult(new Intent(this,Login.class), DO_LOGIN);
 	}
 
 	@Override
@@ -142,6 +144,9 @@ public class MainActivity extends FragmentActivity {
 						"Welcome, " + user.getName() + "!", Toast.LENGTH_LONG)
 						.show();
 				break;
+				
+			case DO_LOGIN:
+				
 
 			default:
 				break;
