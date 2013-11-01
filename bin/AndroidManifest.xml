@@ -24,10 +24,10 @@
         </activity>
         
         <activity 
+            android:name="com.fibrobook.Login" ></activity>
+        <activity 
             android:name="com.nevala.calendar.CalendarView"
             android:label="@string/calendar_label" ></activity>
-        <activity 
-            android:name="com.fibrobook.Login" ></activity>
         <activity 
             android:name="com.fibrobook.Settings"
             android:label="@string/action_settings" ></activity>
