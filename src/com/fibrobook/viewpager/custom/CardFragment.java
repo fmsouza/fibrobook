@@ -37,6 +37,7 @@ import android.widget.ListView;
 import android.widget.RatingBar;
 
 import com.fibrobook.MainActivity;
+import com.fibrobook.R;
 import com.fibrobook.model.DailyEvent;
 import com.fibrobook.model.DailyEventDAO;
 import com.fibrobook.model.DailyEventSummary;

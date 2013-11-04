@@ -18,6 +18,8 @@ package com.astuetz.viewpager.extensions;
 
 import java.util.Locale;
 
+import com.fibrobook.R;
+
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
