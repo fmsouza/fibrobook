@@ -2,8 +2,23 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:id="@+id/linLayout" >
+	android:id="@+id/linLayout" >
+	
+    <ImageView 
+        android:id="@+id/appLogo"
+        android:background="@drawable/ic_launcher"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="120dp"
+        android:contentDescription="@string/app_name" />
+    
+    <TextView 
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pass" />
     
     <EditText
         android:id="@+id/input"
@@ -11,8 +26,6 @@
         android:layout_height="wrap_content"
         android:textSize="42sp"
         android:inputType="numberPassword"
-        android:layout_gravity="center"
-        android:layout_marginTop="200dp"
         android:textAlignment="center"
         android:background="@color/white" />
     

@@ -12,7 +12,7 @@ import android.os.Handler;
 public abstract class ColoredActivity extends Activity {
 
 	public static Drawable oldBackground = null;
-	public static int currentColor = 0xFF5161BC;
+	public static int currentColor = 0xFFd675da; //5161BC;
 	public static Handler handler = new Handler();
 	
 	protected void onCreate(Bundle savedInstanceState) {

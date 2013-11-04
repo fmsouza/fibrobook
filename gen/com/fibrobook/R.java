@@ -142,17 +142,18 @@ containing a value of this type.
     }
     public static final class id {
         public static final int aboutContent=0x7f090000;
-        public static final int action_calendar=0x7f090022;
-        public static final int action_settings=0x7f090023;
+        public static final int action_calendar=0x7f090023;
+        public static final int action_settings=0x7f090024;
+        public static final int appLogo=0x7f09001b;
         public static final int birthday=0x7f090018;
         public static final int button=0x7f090005;
         public static final int confirmPass=0x7f090016;
         public static final int container=0x7f09000e;
         public static final int date=0x7f09000b;
-        public static final int dialog_ratingbar=0x7f09001f;
+        public static final int dialog_ratingbar=0x7f090020;
         public static final int gridview=0x7f09000a;
         public static final int header=0x7f090006;
-        public static final int input=0x7f09001b;
+        public static final int input=0x7f09001c;
         public static final int labelAge=0x7f090003;
         public static final int labelName=0x7f090001;
         public static final int layoutConfirmPass=0x7f090014;
@@ -160,15 +161,15 @@ containing a value of this type.
         public static final int linLayout=0x7f09001a;
         public static final int name=0x7f090010;
         public static final int next=0x7f090009;
-        public static final int optionList=0x7f090021;
-        public static final int pager=0x7f09001d;
+        public static final int optionList=0x7f090022;
+        public static final int pager=0x7f09001e;
         public static final int pass=0x7f090013;
         public static final int previous=0x7f090007;
-        public static final int rank_dialog_button=0x7f090020;
-        public static final int rank_dialog_text1=0x7f09001e;
+        public static final int rank_dialog_button=0x7f090021;
+        public static final int rank_dialog_text1=0x7f09001f;
         public static final int submit=0x7f090019;
         public static final int symphtomList=0x7f09000d;
-        public static final int tabs=0x7f09001c;
+        public static final int tabs=0x7f09001d;
         public static final int textAge=0x7f090017;
         public static final int textConfirmPass=0x7f090015;
         public static final int textHello=0x7f09000c;
