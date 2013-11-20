@@ -23,6 +23,7 @@ import java.util.Locale;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.util.TypedValue;
 import android.view.Menu;
@@ -37,7 +38,9 @@ import com.fibrobook.viewpager.custom.CardFragment;
 import com.fibrobook.viewpager.custom.MyPagerAdapter;
 import com.nevala.calendar.CalendarView;
 
-public class MainActivity extends ColoredFragmentActivity {
+public class MainActivity extends FragmentActivity {
+	
+	protected PagerSlidingTabStrip tabs;
 
 	private static final int PICK_DATE_REQUEST = 1;
 	private static final int REGISTER_USER = 2;
@@ -71,7 +74,6 @@ public class MainActivity extends ColoredFragmentActivity {
 		pager.setPageMargin(pageMargin);
 
 		tabs.setViewPager(pager);
-		tabs.setIndicatorColor(currentColor);
 	}
 
 	private void prepareEnvironment() {

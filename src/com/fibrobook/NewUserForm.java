@@ -5,6 +5,7 @@ import java.util.Date;
 import com.fibrobook.model.User;
 import com.fibrobook.model.UserDAO;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -13,7 +14,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class NewUserForm extends ColoredActivity {
+public class NewUserForm extends Activity {
 	
 
 	@Override

@@ -109,8 +109,9 @@ containing a value of this type.
     }
     public static final class color {
         public static final int background_tab_pressed=0x7f050000;
-        public static final int text_color=0x7f050001;
-        public static final int white=0x7f050002;
+        public static final int pressed_fibrobook=0x7f050001;
+        public static final int text_color=0x7f050002;
+        public static final int white=0x7f050003;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -123,22 +124,53 @@ containing a value of this type.
         public static final int activity_vertical_margin=0x7f060001;
     }
     public static final class drawable {
-        public static final int actionbar_bottom=0x7f020000;
-        public static final int background_card=0x7f020001;
-        public static final int background_tab=0x7f020002;
-        public static final int background_tabs=0x7f020003;
-        public static final int background_tabs_diagonal=0x7f020004;
-        public static final int header_background=0x7f020005;
-        public static final int ic_action_go_to_today=0x7f020006;
-        public static final int ic_action_new=0x7f020007;
-        public static final int ic_action_user=0x7f020008;
-        public static final int ic_launcher=0x7f020009;
-        public static final int ic_launcher_actionbar=0x7f02000a;
-        public static final int item_background=0x7f02000b;
-        public static final int item_background_focused=0x7f02000c;
-        public static final int list_item_background=0x7f02000d;
-        public static final int tabs_pattern=0x7f02000e;
-        public static final int tabs_pattern_diagonal=0x7f02000f;
+        public static final int ab_background_textured_fibrobook=0x7f020000;
+        public static final int ab_bottom_solid_fibrobook=0x7f020001;
+        public static final int ab_solid_fibrobook=0x7f020002;
+        public static final int ab_stacked_solid_fibrobook=0x7f020003;
+        public static final int ab_texture_tile_fibrobook=0x7f020004;
+        public static final int ab_transparent_fibrobook=0x7f020005;
+        public static final int actionbar_bottom=0x7f020006;
+        public static final int background_card=0x7f020007;
+        public static final int background_tab=0x7f020008;
+        public static final int background_tabs=0x7f020009;
+        public static final int background_tabs_diagonal=0x7f02000a;
+        public static final int btn_cab_done_default_fibrobook=0x7f02000b;
+        public static final int btn_cab_done_fibrobook=0x7f02000c;
+        public static final int btn_cab_done_focused_fibrobook=0x7f02000d;
+        public static final int btn_cab_done_pressed_fibrobook=0x7f02000e;
+        public static final int cab_background_bottom_fibrobook=0x7f02000f;
+        public static final int cab_background_top_fibrobook=0x7f020010;
+        public static final int header_background=0x7f020011;
+        public static final int ic_action_go_to_today=0x7f020012;
+        public static final int ic_action_new=0x7f020013;
+        public static final int ic_launcher=0x7f020014;
+        public static final int ic_launcher_actionbar=0x7f020015;
+        public static final int item_background=0x7f020016;
+        public static final int item_background_focused=0x7f020017;
+        public static final int list_focused_fibrobook=0x7f020018;
+        public static final int list_item_background=0x7f020019;
+        public static final int menu_dropdown_panel_fibrobook=0x7f02001a;
+        public static final int pressed_background_fibrobook=0x7f02001b;
+        public static final int progress_bg_fibrobook=0x7f02001c;
+        public static final int progress_horizontal_fibrobook=0x7f02001d;
+        public static final int progress_primary_fibrobook=0x7f02001e;
+        public static final int progress_secondary_fibrobook=0x7f02001f;
+        public static final int selectable_background_fibrobook=0x7f020020;
+        public static final int spinner_ab_default_fibrobook=0x7f020021;
+        public static final int spinner_ab_disabled_fibrobook=0x7f020022;
+        public static final int spinner_ab_focused_fibrobook=0x7f020023;
+        public static final int spinner_ab_pressed_fibrobook=0x7f020024;
+        public static final int spinner_background_ab_fibrobook=0x7f020025;
+        public static final int tab_indicator_ab_fibrobook=0x7f020026;
+        public static final int tab_selected_fibrobook=0x7f020027;
+        public static final int tab_selected_focused_fibrobook=0x7f020028;
+        public static final int tab_selected_pressed_fibrobook=0x7f020029;
+        public static final int tab_unselected_fibrobook=0x7f02002a;
+        public static final int tab_unselected_focused_fibrobook=0x7f02002b;
+        public static final int tab_unselected_pressed_fibrobook=0x7f02002c;
+        public static final int tabs_pattern=0x7f02002d;
+        public static final int tabs_pattern_diagonal=0x7f02002e;
     }
     public static final class id {
         public static final int aboutContent=0x7f090000;
@@ -216,16 +248,11 @@ containing a value of this type.
         public static final int save=0x7f07000b;
     }
     public static final class style {
+        public static final int ActionBar_Solid_Fibrobook=0x7f040003;
+        public static final int ActionBar_Transparent_Fibrobook=0x7f040004;
+        public static final int ActionBarTabStyle_Fibrobook=0x7f040007;
+        public static final int ActionButton_CloseMode_Fibrobook=0x7f04000a;
         /** 
-        Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
-    
-
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        
-
         Base application theme for API 11+. This theme completely replaces
         AppBaseTheme from res/values/styles.xml on API 11+ devices.
     
@@ -238,11 +265,15 @@ containing a value of this type.
  API 14 theme customizations can go here. 
          */
         public static final int AppBaseTheme=0x7f040001;
-        /**  Application theme. 
- All customizations that are NOT specific to a particular API-level can go here. 
-         */
-        public static final int AppTheme=0x7f040002;
+        public static final int DropDownListView_Fibrobook=0x7f040006;
+        public static final int DropDownNav_Fibrobook=0x7f040008;
         public static final int FullHeightDialog=0x7f040000;
+        public static final int PopupMenu_Fibrobook=0x7f040005;
+        public static final int ProgressBar_Fibrobook=0x7f040009;
+        public static final int Theme_Fibrobook=0x7f040002;
+        /**  this style is only referenced in a Light.DarkActionBar based theme 
+         */
+        public static final int Theme_Fibrobook_Widget=0x7f04000b;
     }
     public static final class styleable {
         /** Attributes that can be used with a PagerSlidingTabStrip.

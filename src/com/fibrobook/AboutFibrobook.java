@@ -1,8 +1,9 @@
 package com.fibrobook;
 
+import android.app.Activity;
 import android.os.Bundle;
 
-public class AboutFibrobook extends ColoredActivity {
+public class AboutFibrobook extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState){

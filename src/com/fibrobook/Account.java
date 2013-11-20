@@ -2,6 +2,7 @@ package com.fibrobook;
 
 import com.fibrobook.model.User;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,7 +10,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class Account extends ColoredActivity {
+public class Account extends Activity {
 	
 	private static final int UPDATE_USER_DATA_REQUEST = 1;
 	

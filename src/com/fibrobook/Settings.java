@@ -3,6 +3,7 @@ package com.fibrobook;
 import java.util.Arrays;
 import java.util.List;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,7 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
 
-public class Settings extends ColoredActivity {
+public class Settings extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState){

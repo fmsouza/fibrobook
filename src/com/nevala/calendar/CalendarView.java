@@ -20,10 +20,10 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Random;
 
-import com.fibrobook.ColoredActivity;
 import com.fibrobook.R;
 
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -35,7 +35,7 @@ import android.widget.GridView;
 import android.widget.TextView;
 
 
-public class CalendarView extends ColoredActivity{
+public class CalendarView extends Activity{
 
 	public Calendar month;
 	public CalendarAdapter adapter;

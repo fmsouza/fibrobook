@@ -130,7 +130,15 @@ public class CardFragment extends Fragment {
 	}
 
 	public void symphtomsView(LinearLayout l) {
+		
+		LayoutParams params = new LayoutParams(
+			android.view.ViewGroup.LayoutParams.MATCH_PARENT,
+			android.view.ViewGroup.LayoutParams.MATCH_PARENT,
+			Gravity.TOP);
+		
 		ListView symphtomList = new ListView(getActivity());
+		symphtomList.setLayoutParams(params);
+		
 		ArrayAdapter<Disease> adapter = new ArrayAdapter<Disease>(
 				getActivity(), android.R.layout.simple_list_item_1, symphtoms);
 		symphtomList.setAdapter(adapter);
