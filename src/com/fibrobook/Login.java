@@ -19,6 +19,7 @@ public class Login extends Activity {
 		super.onCreate(savedInstanceState);
 		getActionBar().hide();
 		setContentView(R.layout.login);
+		
 		LinearLayout l = (LinearLayout) findViewById(R.id.linLayout);
 		l.setBackgroundColor(color);
 		final EditText et = (EditText) findViewById(R.id.input);

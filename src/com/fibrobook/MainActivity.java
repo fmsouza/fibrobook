@@ -80,7 +80,7 @@ public class MainActivity extends FragmentActivity {
 		user = UserDAO.getUser(this, 1);
 		if (user == null)
 			startActivityForResult(new Intent(this, NewUserForm.class), REGISTER_USER);
-		else
+		else if(user.getPassword().length()>0)
 			startActivityForResult(new Intent(this,Login.class), DO_LOGIN);
 	}
 
