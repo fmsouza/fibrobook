@@ -11,8 +11,9 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class Account extends Activity {
-	
+
 	private static final int UPDATE_USER_DATA_REQUEST = 1;
+	private static final int UPDATE_USER_PASS_REQUEST = 2;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
@@ -26,13 +27,22 @@ public class Account extends Activity {
 		
 		TextView age = (TextView) findViewById(R.id.valueAge);
 		age.setText(String.valueOf(user.getAge()));
-		
-		Button btn = (Button) findViewById(R.id.button);
-		btn.setOnClickListener(new OnClickListener() {
+
+		Button btnUpdate = (Button) findViewById(R.id.buttonUpdate);
+		btnUpdate.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				startActivityForResult(new Intent(Account.this,UpdateUserForm.class),UPDATE_USER_DATA_REQUEST);
+			}
+		});
+
+		Button btnPass = (Button) findViewById(R.id.buttonPass);
+		btnPass.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				startActivityForResult(new Intent(Account.this,UpdatePassForm.class),UPDATE_USER_PASS_REQUEST);
 			}
 		});
 	}
@@ -40,7 +50,7 @@ public class Account extends Activity {
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
-		if (requestCode == UPDATE_USER_DATA_REQUEST) {
+		if (requestCode == UPDATE_USER_DATA_REQUEST || requestCode == UPDATE_USER_PASS_REQUEST){
             if (resultCode == RESULT_OK) {
         		
         		User user = MainActivity.user;

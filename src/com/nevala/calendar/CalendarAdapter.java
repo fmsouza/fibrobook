@@ -119,8 +119,7 @@ public class CalendarAdapter extends BaseAdapter {
         return v;
     }
     
-    public void refreshDays()
-    {
+    public void refreshDays(){
     	// clear items
     	items.clear();
     	

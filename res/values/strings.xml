@@ -4,6 +4,7 @@
     <string name="acc_title">Manage Account</string>
     <string name="af_title">About Fibrobook</string>
     <string name="nuf_title">Fill your data</string>
+    <string name="upf_title">Change your password</string>
 
     <string name="app_name">Fibrobook</string>
     <string name="calendar_label">Choose the date</string>
@@ -13,6 +14,7 @@
     <string name="diary">Select date on calendar</string>
 	<string name="open">Open</string>
 	<string name="edit">Edit</string>
+	<string name="editPass">Change password</string>
 	<string name="save">Save</string>
 	<string name="intensity">Intensity</string>
 	
@@ -24,7 +26,11 @@
 	<string name="formName">Name: </string>
 	<string name="formAge">Age: </string>
 	<string name="formBirthday">Birthday: </string>
-	<string name="pass">4-digit Pin: </string>
+	<string name="pass">4-digit PIN: </string>
 	<string name="confirmPass">PIN again: </string>
+	
+	<string name="currentPass">Current PIN: </string>
+	<string name="newPass">New 4-digit PIN: </string>
+	<string name="repeatPass">Retype new PIN: </string>
 
 </resources>

@@ -38,6 +38,13 @@ public class UserDAO extends SQLiteOpenHelper{
 		close();
 	}
 	
+	public void updatePass(User user){
+		ContentValues values = new ContentValues();
+		values.put("password", user.getPassword());
+		getWritableDatabase().update(TABLE, values, "id=1", null);
+		close();
+	}
+	
 	public void firstRun(){
 		User user = new User("User");
 		SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd",Locale.US);

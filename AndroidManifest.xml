@@ -43,6 +43,9 @@
         <activity 
             android:name="com.fibrobook.UpdateUserForm"
             android:label="@string/nuf_title" ></activity>
+        <activity 
+            android:name="com.fibrobook.UpdatePassForm"
+            android:label="@string/upf_title" ></activity>
     </application>
 
 </manifest>
