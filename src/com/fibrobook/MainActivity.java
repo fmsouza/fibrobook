@@ -1,19 +1,3 @@
-/*
- * Copyright (C) 2013 Andreas Stuetz <andreas.stuetz@gmail.com>
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package com.fibrobook;
 
 import java.text.DateFormat;
@@ -21,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -28,21 +13,23 @@ import android.support.v4.view.ViewPager;
 import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.DatePicker;
 import android.widget.Toast;
 
 import com.astuetz.viewpager.extensions.PagerSlidingTabStrip;
+import com.fibrobook.model.DailyEventSummaryDAO;
 import com.fibrobook.model.SymphtomSummaryDAO;
 import com.fibrobook.model.User;
 import com.fibrobook.model.UserDAO;
 import com.fibrobook.viewpager.custom.CardFragment;
 import com.fibrobook.viewpager.custom.MyPagerAdapter;
-import com.nevala.calendar.CalendarView;
 
 public class MainActivity extends FragmentActivity {
 	
 	protected PagerSlidingTabStrip tabs;
 
-	private static final int PICK_DATE_REQUEST = 1;
 	private static final int REGISTER_USER = 2;
 	private static final int DO_LOGIN = 3;
 	private ViewPager pager;
@@ -92,22 +79,19 @@ public class MainActivity extends FragmentActivity {
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
+		
 		switch (item.getItemId()) {
 
-		case R.id.action_calendar:
-			Intent intent = new Intent(this, CalendarView.class);
-			String[] d = date.split("-");
-			String dd = d[0] + "-" + String.valueOf(Integer.parseInt(d[1]) - 1)
-					+ "-" + d[2];
-			intent.putExtra("date", dd);
-			startActivityForResult(intent, PICK_DATE_REQUEST);
-			break;
-		case R.id.action_settings:
-			startActivity(new Intent(this, Settings.class));
-			break;
-
-		default:
-			break;
+			case R.id.action_calendar:
+				String[] fullDate = date.split("-");
+				fullDate[1] = String.valueOf(Integer.parseInt(fullDate[1]) - 1);
+				updateDate(fullDate);
+				break;
+			case R.id.action_settings:
+				startActivity(new Intent(this, Settings.class));
+				break;
+	
+			default: break;
 		}
 
 		return true;
@@ -116,43 +100,36 @@ public class MainActivity extends FragmentActivity {
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
-		if (resultCode == RESULT_OK) {
-			switch (requestCode) {
+		if(resultCode==RESULT_OK && requestCode==REGISTER_USER)
+			Toast.makeText(getApplicationContext(),"Welcome, " + user.getName() + "!", Toast.LENGTH_LONG).show();
+		else if(requestCode==DO_LOGIN) finish();
+	}
 
-			case PICK_DATE_REQUEST:
-				date = data.getStringExtra("date");
-				SymphtomSummaryDAO dao = new SymphtomSummaryDAO(this);
+	void updateDate(String[] cd){
+		final Dialog dialog = new Dialog(this,com.fibrobook.R.style.FullHeightDialog);
+		dialog.setContentView(R.layout.datepicker_dialog);
+		DatePicker dp = (DatePicker) dialog.findViewById(R.id.dp);
+		dp.setMaxDate(new Date().getTime());
+		String[] d = date.split("-");
+		dp.updateDate(Integer.parseInt(d[0]), Integer.parseInt(d[1]), Integer.parseInt(d[2]));
+		dialog.findViewById(R.id.dp_dialog_button).setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				DatePicker dp = (DatePicker) dialog.findViewById(R.id.dp);
+				date = String.valueOf(dp.getYear())+"-"+String.valueOf(dp.getMonth()+1)+"-"+String.valueOf(dp.getDayOfMonth());
+				SymphtomSummaryDAO dao = new SymphtomSummaryDAO(getApplicationContext());
+				DailyEventSummaryDAO des = new DailyEventSummaryDAO(getApplicationContext());
 				CardFragment.ds = dao.getSymphtomSummary(date);
+				CardFragment.des = des.getDailySummary(date);
 				dao.close();
+				des.close();
 				String[] d = date.split("-");
 				String[] title = getTitle().toString().split(" - ");
 				setTitle(title[0] + " - " + d[2] + "/" + d[1] + "/" + d[0]);
-				break;
-
-			case REGISTER_USER:
-				Toast.makeText(getApplicationContext(),
-						"Welcome, " + user.getName() + "!", Toast.LENGTH_LONG)
-						.show();
-				break;
-				
-			case DO_LOGIN:
-				
-
-			default:
-				break;
+				dialog.dismiss();
 			}
-		}
-		else{
-			switch (requestCode) {
-			
-			case DO_LOGIN:
-				finish();
-				break;
-
-			default:
-				break;
-			}
-		}
+		});
+		dialog.show();
 	}
-
 }

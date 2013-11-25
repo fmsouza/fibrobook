@@ -12,6 +12,7 @@
     android:background="@drawable/header_background"
     >
 <LinearLayout
+    android:id="@+id/layoutPrevious"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:gravity="left"
@@ -47,6 +48,7 @@
     
     />
 <LinearLayout
+    android:id="@+id/layoutNext"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:gravity="right"

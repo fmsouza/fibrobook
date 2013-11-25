@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="vertical"
+    android:id="@+id/container" >
+
+    <LinearLayout
+        android:id="@+id/layoutPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        
+        <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/currentPass" />
+        
+        <EditText 
+            android:id="@+id/pass" 
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:inputType="numberPassword" />
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutNewPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        
+        <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/newPass" />
+        
+        <EditText 
+            android:id="@+id/newPass" 
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:inputType="numberPassword" />
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutRepeatPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        
+        <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/repeatPass" />
+        
+        <EditText 
+            android:id="@+id/repeatPass" 
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:inputType="numberPassword" />
+        
+    </LinearLayout>
+    
+    <Button 
+        android:id="@+id/submit" 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/save" />
+
+</LinearLayout>

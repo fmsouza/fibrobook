@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:padding="2dip">  
+     
+	<DatePicker
+	    android:id="@+id/dp"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content"
+	    />
+	
+	<Button 
+		android:id="@+id/dp_dialog_button" 
+		android:layout_height="wrap_content"
+		android:layout_width="fill_parent" 
+		android:text="@string/select"
+		android:focusable="false"
+		android:layout_margin="5dp"
+		android:textSize="20sp" />
+
+</LinearLayout>

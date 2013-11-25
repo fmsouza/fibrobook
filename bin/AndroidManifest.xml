@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.fibrobook"
     android:versionCode="1"
-    android:versionName="alpha 5" >
+    android:versionName="alpha 6" >
 
     <uses-sdk
         android:minSdkVersion="11"
@@ -25,9 +25,6 @@
         
         <activity 
             android:name="com.fibrobook.Login" ></activity>
-        <activity 
-            android:name="com.nevala.calendar.CalendarView"
-            android:label="@string/calendar_label" ></activity>
         <activity 
             android:name="com.fibrobook.Settings"
             android:label="@string/action_settings" ></activity>
