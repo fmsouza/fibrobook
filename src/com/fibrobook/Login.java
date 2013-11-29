@@ -12,7 +12,7 @@ import android.widget.Toast;
 public class Login extends Activity {
 	
 	public static int PASSWORD_SIZE = 4;
-	private final int color = 0xFFD675DA;
+	private final int color = 0xFF361D81;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState){

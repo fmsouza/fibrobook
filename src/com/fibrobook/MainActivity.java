@@ -102,7 +102,8 @@ public class MainActivity extends FragmentActivity {
 		super.onActivityResult(requestCode, resultCode, data);
 		if(resultCode==RESULT_OK && requestCode==REGISTER_USER)
 			Toast.makeText(getApplicationContext(),"Welcome, " + user.getName() + "!", Toast.LENGTH_LONG).show();
-		else if(requestCode==DO_LOGIN) finish();
+		else if(requestCode==DO_LOGIN)
+			Toast.makeText(getApplicationContext(),"Welcome back, " + user.getName() + "!", Toast.LENGTH_LONG).show();
 	}
 
 	void updateDate(String[] cd){

@@ -173,67 +173,59 @@ containing a value of this type.
     }
     public static final class id {
         public static final int aboutContent=0x7f090000;
-        public static final int action_calendar=0x7f09002e;
-        public static final int action_settings=0x7f09002f;
-        public static final int appLogo=0x7f090026;
-        public static final int birthday=0x7f090024;
+        public static final int action_calendar=0x7f090027;
+        public static final int action_settings=0x7f090028;
+        public static final int appLogo=0x7f09001f;
+        public static final int birthday=0x7f09001d;
         public static final int buttonPass=0x7f090006;
         public static final int buttonUpdate=0x7f090005;
-        public static final int confirmPass=0x7f090021;
-        public static final int container=0x7f090013;
-        public static final int date=0x7f09000e;
-        public static final int dialog_ratingbar=0x7f09002b;
-        public static final int dp=0x7f09000f;
-        public static final int dp_dialog_button=0x7f090010;
-        public static final int gridview=0x7f09000d;
-        public static final int header=0x7f090007;
-        public static final int input=0x7f090027;
+        public static final int confirmPass=0x7f09001a;
+        public static final int container=0x7f09000c;
+        public static final int date=0x7f090007;
+        public static final int dialog_ratingbar=0x7f090024;
+        public static final int dp=0x7f090008;
+        public static final int dp_dialog_button=0x7f090009;
+        public static final int input=0x7f090020;
         public static final int labelAge=0x7f090003;
         public static final int labelName=0x7f090001;
-        public static final int layoutConfirmPass=0x7f09001f;
-        public static final int layoutNewPass=0x7f090016;
-        public static final int layoutNext=0x7f09000b;
-        public static final int layoutPass=0x7f090014;
-        public static final int layoutPrevious=0x7f090008;
-        public static final int layoutRepeatPass=0x7f090018;
-        public static final int layoutUserAge=0x7f090022;
-        public static final int layoutUserName=0x7f09001b;
-        public static final int linLayout=0x7f090025;
-        public static final int name=0x7f09001d;
-        public static final int newPass=0x7f090017;
-        public static final int next=0x7f09000c;
-        public static final int optionList=0x7f09002d;
-        public static final int pager=0x7f090029;
-        public static final int pass=0x7f090015;
-        public static final int previous=0x7f090009;
-        public static final int rank_dialog_button=0x7f09002c;
-        public static final int rank_dialog_text1=0x7f09002a;
-        public static final int repeatPass=0x7f090019;
-        public static final int submit=0x7f09001a;
-        public static final int symphtomList=0x7f090012;
-        public static final int tabs=0x7f090028;
-        public static final int textAge=0x7f090023;
-        public static final int textConfirmPass=0x7f090020;
-        public static final int textHello=0x7f090011;
-        public static final int textName=0x7f09001c;
-        public static final int textPass=0x7f09001e;
-        public static final int title=0x7f09000a;
+        public static final int layoutConfirmPass=0x7f090018;
+        public static final int layoutNewPass=0x7f09000f;
+        public static final int layoutPass=0x7f09000d;
+        public static final int layoutRepeatPass=0x7f090011;
+        public static final int layoutUserAge=0x7f09001b;
+        public static final int layoutUserName=0x7f090014;
+        public static final int linLayout=0x7f09001e;
+        public static final int name=0x7f090016;
+        public static final int newPass=0x7f090010;
+        public static final int optionList=0x7f090026;
+        public static final int pager=0x7f090022;
+        public static final int pass=0x7f09000e;
+        public static final int rank_dialog_button=0x7f090025;
+        public static final int rank_dialog_text1=0x7f090023;
+        public static final int repeatPass=0x7f090012;
+        public static final int submit=0x7f090013;
+        public static final int symphtomList=0x7f09000b;
+        public static final int tabs=0x7f090021;
+        public static final int textAge=0x7f09001c;
+        public static final int textConfirmPass=0x7f090019;
+        public static final int textHello=0x7f09000a;
+        public static final int textName=0x7f090015;
+        public static final int textPass=0x7f090017;
         public static final int valueAge=0x7f090004;
         public static final int valueName=0x7f090002;
     }
     public static final class layout {
         public static final int about_fibrobook=0x7f030000;
         public static final int account=0x7f030001;
-        public static final int calendar=0x7f030002;
-        public static final int calendar_item=0x7f030003;
-        public static final int datepicker_dialog=0x7f030004;
-        public static final int diary=0x7f030005;
-        public static final int form_pass=0x7f030006;
-        public static final int form_user=0x7f030007;
-        public static final int login=0x7f030008;
-        public static final int main=0x7f030009;
-        public static final int rating_dialog=0x7f03000a;
-        public static final int settings=0x7f03000b;
+        public static final int calendar_item=0x7f030002;
+        public static final int datepicker_dialog=0x7f030003;
+        public static final int diary=0x7f030004;
+        public static final int form_pass=0x7f030005;
+        public static final int form_user=0x7f030006;
+        public static final int login=0x7f030007;
+        public static final int main=0x7f030008;
+        public static final int rating_dialog=0x7f030009;
+        public static final int settings=0x7f03000a;
     }
     public static final class menu {
         public static final int diary=0x7f080000;
@@ -267,9 +259,10 @@ containing a value of this type.
     }
     public static final class style {
         public static final int ActionBar_Solid_Fibrobook=0x7f040003;
-        public static final int ActionBar_Transparent_Fibrobook=0x7f040004;
-        public static final int ActionBarTabStyle_Fibrobook=0x7f040007;
-        public static final int ActionButton_CloseMode_Fibrobook=0x7f04000a;
+        public static final int ActionBar_TitleTextStyle_Fibrobook=0x7f040004;
+        public static final int ActionBar_Transparent_Fibrobook=0x7f040005;
+        public static final int ActionBarTabStyle_Fibrobook=0x7f040008;
+        public static final int ActionButton_CloseMode_Fibrobook=0x7f04000b;
         /** 
         Base application theme for API 11+. This theme completely replaces
         AppBaseTheme from res/values/styles.xml on API 11+ devices.
@@ -283,15 +276,15 @@ containing a value of this type.
  API 14 theme customizations can go here. 
          */
         public static final int AppBaseTheme=0x7f040001;
-        public static final int DropDownListView_Fibrobook=0x7f040006;
-        public static final int DropDownNav_Fibrobook=0x7f040008;
+        public static final int DropDownListView_Fibrobook=0x7f040007;
+        public static final int DropDownNav_Fibrobook=0x7f040009;
         public static final int FullHeightDialog=0x7f040000;
-        public static final int PopupMenu_Fibrobook=0x7f040005;
-        public static final int ProgressBar_Fibrobook=0x7f040009;
+        public static final int PopupMenu_Fibrobook=0x7f040006;
+        public static final int ProgressBar_Fibrobook=0x7f04000a;
         public static final int Theme_Fibrobook=0x7f040002;
         /**  this style is only referenced in a Light.DarkActionBar based theme 
          */
-        public static final int Theme_Fibrobook_Widget=0x7f04000b;
+        public static final int Theme_Fibrobook_Widget=0x7f04000c;
     }
     public static final class styleable {
         /** Attributes that can be used with a PagerSlidingTabStrip.
