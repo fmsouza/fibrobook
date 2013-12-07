@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.fibrobook"
     android:versionCode="1"
-    android:versionName="alpha 7" >
+    android:versionName="alpha 8" >
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -15,34 +15,41 @@
         android:theme="@style/Theme.Fibrobook" >
         <activity
             android:name="com.fibrobook.MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         
         <activity 
-            android:name="com.fibrobook.Login" ></activity>
+            android:name="com.fibrobook.Login"
+            android:screenOrientation="portrait" ></activity>
         <activity 
             android:name="com.fibrobook.Settings"
-            android:label="@string/action_settings" ></activity>
+            android:label="@string/action_settings"
+            android:screenOrientation="portrait" ></activity>
         <activity 
             android:name="com.fibrobook.Account"
-            android:label="@string/acc_title" ></activity>
+            android:label="@string/acc_title"
+            android:screenOrientation="portrait" ></activity>
         <activity 
             android:name="com.fibrobook.AboutFibrobook"
-            android:label="@string/af_title" ></activity>
+            android:label="@string/af_title"
+            android:screenOrientation="portrait" ></activity>
         <activity 
             android:name="com.fibrobook.NewUserForm"
-            android:label="@string/nuf_title" ></activity>
+            android:label="@string/nuf_title"
+            android:screenOrientation="portrait" ></activity>
         <activity 
             android:name="com.fibrobook.UpdateUserForm"
-            android:label="@string/nuf_title" ></activity>
+            android:label="@string/nuf_title"
+            android:screenOrientation="portrait" ></activity>
         <activity 
             android:name="com.fibrobook.UpdatePassForm"
-            android:label="@string/upf_title" ></activity>
+            android:label="@string/upf_title"
+            android:screenOrientation="portrait" ></activity>
     </application>
 
 </manifest>
